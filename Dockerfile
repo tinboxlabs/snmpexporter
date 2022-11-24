@@ -13,7 +13,7 @@ RUN (mkdir -p /var/lib/mibs/std /tmp/librenms; cd /tmp/librenms; \
 ADD etc/snmp.conf /etc/snmp/
 
 ADD . /tmp/snmpexporter
-RUN make all install -C /tmp/snmpexporter && ls -laR /opt
+RUN make install -C /tmp/snmpexporter && ls -laR /opt
 
 EXPOSE 9190
 CMD ["/opt/snmpexporter/snmpexporterd.py", \
