@@ -1,4 +1,4 @@
-COVERAGE ?= 'python3-coverage'
+COVERAGE ?= 'coverage3'
 export PYTHONPATH=$(CURDIR)
 
 all: test

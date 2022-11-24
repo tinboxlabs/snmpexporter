@@ -3,8 +3,7 @@ FROM python:3-alpine
 RUN apk add --update gcc net-snmp-tools net-snmp-dev musl-dev make findutils \
   wget && \
   pip3 install python3-netsnmp --pre && \
-  pip3 install coverage pyyaml twisted objgraph && \
-  ln -sf /usr/local/bin/coverage3 /usr/local/bin/python3-coverage
+  pip3 install coverage pyyaml twisted objgraph
 
 RUN (mkdir -p /var/lib/mibs/std /tmp/librenms; cd /tmp/librenms; \
   wget https://github.com/librenms/librenms/archive/master.zip 2>&1 && \
